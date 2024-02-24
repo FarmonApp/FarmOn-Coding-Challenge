@@ -11,7 +11,7 @@ Develop an API endpoint that can integrate with FarmOn's system. This endpoint s
 
 ### Background
 We would like to know how much carbon could be sequestrated on a field. You are given two datasets:
-* Feld delinations for agricultural parcels in an area in the Netherlands. The dataset contains the following information:
+* Field delinations for agricultural parcels in an area in the Netherlands. The dataset contains the following information:
   * Field ID
   * Field area
   * Field geometry
