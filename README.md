@@ -42,14 +42,18 @@ Develop a functional and useful UI that can integrate with FarmOn's system. The 
 This is one of the core features of FarmOn's system. The UI should at a glance show how the field has been doing over the years.
 
 ### Challenge
+
 1. Setup a next.js + tailwind project and integrate it into the current docker setup.
-2. Implement a page that can show the the data.
+2. Implement a page that can show the the data. Use the image below as an inspiration:
+![Parcel Graph](./assets/ParcelGraph.png)
 3. Add basic styling to the page.
 4. Add a map that shows the field geometry.
 
+
+
 ### Requirements
 1. **Frontend Integration**: Integrate a docker for next.js into the current docker setup.
-2. **Functionality**: The UI should be able to show the the data in a meaningful way.
+2. **Functionality**: The UI should be able to show the the data in a meaningful way. 
 3. **Documentation**: Provide clear instructions on how to run your code and a brief explanation of your approach.
 4. **Clarity and Readability**: Write clear, concise, and well-structured code.
 5. **Styling**: The UI should be visually appealing and easy to use.
@@ -67,9 +71,8 @@ This is one of the core features of FarmOn's system. The UI should at a glance s
 ## Evaluation Criteria
 
 - **Code Quality**: Readability, structure, and adherence to standard practices.
-- **Functionality**: Accuracy and efficiency of the module.
-- **Innovation**: Creative solution and approache.
-- **Scalability**: Ability to handle large datasets efficiently.
+- **Functionality**: Accuracy and efficiency.
+- **Innovation**: Creative solution and approach.
 
 ## Deadline
 
