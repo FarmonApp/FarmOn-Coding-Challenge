@@ -36,7 +36,7 @@ You can have a look at the data here: [01 - FarmOn Coding Challenge.ipynb](pipel
 
 ## Option 2: Frontend Developer
 ### Objective
-Develop a functional and useful UI that can integrate with FarmOn's system. The UI should should present the data provided by the API endpoint `GET /parcels/{field_id}`.
+Develop a functional and useful UI that can integrate with FarmOn's system. The UI should should present the data provided by the API endpoint `GET http://localhost:8080/parcels/{parcel_id}`. There are two sample datasets (parcel_id 1 and 2) available.
 
 ### Background
 This is one of the core features of FarmOn's system. The UI should at a glance show how the field has been doing over the years.
