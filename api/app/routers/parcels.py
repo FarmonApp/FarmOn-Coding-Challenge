@@ -1,7 +1,8 @@
+import json
 import typing as t
 
-from app.schemas.schemas import Parcel, ParcelDB
-from fastapi import APIRouter, Query
+from app.schemas.schemas import Parcel, ParcelDB, ParcelResponse, Message
+from fastapi import APIRouter, Query, HTTPException, Path
 from shapely.geometry import mapping, shape
 
 router = APIRouter(
@@ -51,3 +52,37 @@ async def find_parcel_by_location(
     crs: str = Query("EPSG:4326"),
 ) -> Parcel:
     pass
+
+
+@router.get(
+    "/{parcel_id}", response_model=ParcelResponse, responses={404: {"model": Message}}
+)
+async def get_parcel(
+    parcel_id: str = Path(..., description="An id representing a parcel"),
+) -> t.Union[Parcel, str]:
+    async def load_data():
+        try:
+            with open("./parcels_data.json", "r") as f:
+                parcels = json.load(f)
+                return parcels
+        except FileNotFoundError:
+            raise HTTPException(status_code=500, detail="Parcels data not found.")
+
+    try:
+        parcels = await load_data()
+        parcel = next(
+            (
+                parcel
+                for parcel in parcels
+                if str(parcel["parcel_id"]) == str(parcel_id)
+            ),
+            None,
+        )
+        if parcel:
+            return parcel
+        else:
+            raise HTTPException(status_code=404, detail="Parcel not found")
+    except json.JSONDecodeError:
+        raise HTTPException(status_code=500, detail="Error decoding parcels data file")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error: {e}")

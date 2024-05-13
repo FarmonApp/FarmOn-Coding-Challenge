@@ -4,7 +4,7 @@
 
 Welcome to the FarmOn Coding Challenge! This challenge is designed to test your coding skills and your ability to apply them in the context of agriculture technology. FarmOn is focused on delivering farming insights, and this challenge reflects real-world scenarios you might encounter working with our technology and tech-stack.
 
-## Challenge Description
+## Option 1: Data Engineer Backend
 
 ### Objective
 Develop an API endpoint that can integrate with FarmOn's system. This endpoint should return a single field for a given location with its carbon content and the carbon potential.
@@ -26,7 +26,6 @@ You can have a look at the data here: [01 - FarmOn Coding Challenge.ipynb](pipel
 4. Implement an API endpoint [here](api/app/routers/parcels.py) that returns a single field for a given location with its carbon content and the carbon potential. Don't forget to write and run tests for the API endpoint.
 5. Present the data through a simple UI. You can use any technology you like. The UI should be able to show the carbon content and the carbon potential for a given location. Integrate the UI into the current docker setup.
 
-
 ### Requirements
 
 1. **API Integration**: Service the data through a RESTful API.
@@ -34,6 +33,27 @@ You can have a look at the data here: [01 - FarmOn Coding Challenge.ipynb](pipel
 3. **Documentation**: Provide clear instructions on how to run your code and a brief explanation of your approach.
 4. **Clarity and Readability**: Write clear, concise, and well-structured code.
 5. **Testing**: It is not required to have 100% test coverage, but you should write tests for the API endpoint.
+
+## Option 2: Frontend Developer
+### Objective
+Develop a functional and useful UI that can integrate with FarmOn's system. The UI should should present the data provided by the API endpoint `GET /parcels/{field_id}`.
+
+### Background
+This is one of the core features of FarmOn's system. The UI should at a glance show how the field has been doing over the years.
+
+### Challenge
+1. Setup a next.js + tailwind project and integrate it into the current docker setup.
+2. Implement a page that can show the the data.
+3. Add basic styling to the page.
+4. Add a map that shows the field geometry.
+
+### Requirements
+1. **Frontend Integration**: Integrate a docker for next.js into the current docker setup.
+2. **Functionality**: The UI should be able to show the the data in a meaningful way.
+3. **Documentation**: Provide clear instructions on how to run your code and a brief explanation of your approach.
+4. **Clarity and Readability**: Write clear, concise, and well-structured code.
+5. **Styling**: The UI should be visually appealing and easy to use.
+
 
 ## Submission Guidelines
 
