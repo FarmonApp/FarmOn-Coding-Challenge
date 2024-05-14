@@ -4,6 +4,8 @@
 
 Welcome to the FarmOn Coding Challenge! This challenge is designed to test your coding skills and your ability to apply them in the context of agriculture technology. FarmOn is focused on delivering farming insights, and this challenge reflects real-world scenarios you might encounter working with our technology and tech-stack.
 
+**Choose one of the following options:**
+
 ## Option 1: Data Engineer Backend
 
 ### Objective
