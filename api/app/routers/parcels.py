@@ -45,13 +45,13 @@ async def add_parcels(parcels: t.Union[Parcel, t.List[Parcel]]) -> t.List[str]:
     return success
 
 
-@router.get("/find_parcel_by_location")
+@router.get("/find_parcel_by_location", responses={501: {"model": Message}})
 async def find_parcel_by_location(
     latitude: float = Query(...),
     longitude: float = Query(...),
     crs: str = Query("EPSG:4326"),
 ) -> Parcel:
-    pass
+    raise HTTPException(status_code=501, detail="Not implemented")
 
 
 @router.get(

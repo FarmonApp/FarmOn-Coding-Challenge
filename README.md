@@ -37,18 +37,26 @@ You can have a look at the data here: [01 - FarmOn Coding Challenge.ipynb](pipel
 
 ## Option 2: Frontend Developer
 ### Objective
-Develop a functional and useful UI that can integrate with FarmOn's system. The UI should should present the data provided by the API endpoint `GET http://localhost:8080/parcels/{parcel_id}`. There are two sample datasets (parcel_id 1 and 2) available.
+Develop a functional and useful UI that can integrate with FarmOn's system. The UI should should present the data provided by the API endpoint `GET http://localhost:8080/parcels/{parcel_id}`. There are two sample parcels (parcel_id 1 and 2).
+
+Follow this [link](http://localhost:8080/redoc#tag/Parcels/operation/get_parcel_parcels__parcel_id__get) to see a detailed API documentation for the endpoint.
+
+
+> [!IMPORTANT]  
+> Don't use any other endpoint for the frontend challange. All other endpoints are ment to be used for the backend challeng.
+
+
 
 ### Background
 This is one of the core features of FarmOn's system. The UI should at a glance show how the field has been doing over the years.
 
 ### Challenge
 
-1. Setup a frontend framework + tailwind project of your choice and add it to the current docker compose setup.
-2. Implement a page that can show the the data. Use the image below as an inspiration:
+1. Setup a frontend framework of your choice + tailwind project and add it to the current docker compose setup.
+2. Implement a single page showing the data. Use the image below as an inspiration:
 ![Parcel Graph](./assets/ParcelGraph.png)
-3. Add basic styling to the page.
-4. Add a map that shows the field geometry.
+4. Add basic styling to the page.
+5. Add a map that shows the field geometry.
 
 
 
@@ -95,7 +103,7 @@ Good luck, and we look forward to your innovative solutions!
 
 
 ## Services
-- **API**: [http://localhost:8000/docs](http://localhost:8000/docs)
+- **API Docs**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 - **Jupyter Lab**: [http://localhost:8888](http://localhost:8888)
 - **MongoDB**: [http://localhost:27017](http://localhost:27017)
 - **Mongo Express**: [http://localhost:8081](http://localhost:8081)
@@ -105,3 +113,4 @@ You can find the passwords in the [.env.example](.env.example) file.
 ## Tips
 - Keep in mind that geo data has different types of projections. Make sure to use the right one for your calculations.
 - When connecting to the API through jupyter lab, make sure to use the right URL. It should be `http://api:8080` instead of `http://localhost:8080`.
+- The API is built with FastAPI. You can find the code in the [api](api) folder.
