@@ -44,7 +44,7 @@ This is one of the core features of FarmOn's system. The UI should at a glance s
 
 ### Challenge
 
-1. Setup a next.js + tailwind project and integrate it into the current docker setup.
+1. Setup a frontend framework + tailwind project of your choice and add it to the current docker compose setup.
 2. Implement a page that can show the the data. Use the image below as an inspiration:
 ![Parcel Graph](./assets/ParcelGraph.png)
 3. Add basic styling to the page.
