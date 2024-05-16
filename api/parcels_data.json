@@ -8741,6 +8741,8 @@
         "parcel_id": 2,
         "parcel_name": "Parcel 2",
         "parcel_owner": "Owner 2",
+        "parcel_area": 3.5,
+        "parcel_area_unit": "hectares",
         "parcel_location": {
             "type": "Feature",
             "properties": {},

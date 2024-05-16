@@ -58,7 +58,7 @@ async def find_parcel_by_location(
     "/{parcel_id}", response_model=ParcelResponse, responses={404: {"model": Message}}
 )
 async def get_parcel(
-    parcel_id: str = Path(..., description="An id representing a parcel"),
+    parcel_id: str = Path(..., description="An id representing a parcel. For the sake of the coding challenge the ID can either be 1 or 2."),
 ) -> t.Union[Parcel, str]:
     async def load_data():
         try:
